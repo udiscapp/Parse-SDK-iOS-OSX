@@ -773,6 +773,7 @@ static void PFObjectAssertValueIsKindOfValidClass(id object) {
  Checks if Parse class name could be used to initialize a given instance of PFObject or it's subclass.
  */
 + (void)_assertValidInstanceClassName:(NSString *)className {
+    NSLog(@"Validating class name: %@", className);
     PFParameterAssert(className, @"Class name can't be 'nil'.");
     PFParameterAssert(![className hasPrefix:@"_"], @"Invalid class name. Class names cannot start with an underscore.");
 }
